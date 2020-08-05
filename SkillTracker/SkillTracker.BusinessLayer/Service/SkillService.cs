@@ -6,41 +6,70 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using SkillTracker.BusinessLayer.Service.Repository;
 
 namespace SkillTracker.BusinessLayer.Service
 {
     public class SkillService : ISkillService
     {
-        private readonly ISkillConnection _skillConnection;
+        /// <summary>
+        /// skillrepository type of reference
+        /// </summary>
+        private readonly ISkillRepository _skillRepository;
 
-        public SkillService(SkillContext skillContext)
+        /// <summary>
+        /// Inject SkillRepository object
+        /// </summary>
+        /// <param name="skillRepository"></param>
+        public SkillService(ISkillRepository skillRepository)
         {
-            _skillConnection = new SkillConnection(skillContext);
+            _skillRepository = skillRepository;
         }
 
-        // Save new skill upgarded by full stack engineer into database
-        public IEnumerable<Skill> GetAllSkills()
+
+        /// <summary>
+        /// call repository method to Save new skill upgarded by full stack engineer into database
+        /// </summary>
+        /// <returns>list of skills</returns>
+      public async Task<IEnumerable<Skill>> GetAllSkills()
         {
-            //Business logic to retrieve all skills from database
-            return null;
+            //Business Logic goes here
+            throw new NotImplementedException();
         }
-        // Save new skill upgarded by full stack engineer into database
-        public async Task<string> AddNewSkill(Skill skill)
+
+        /// <summary>
+        /// Save new skill upgarded by full stack engineer into database
+        /// </summary>
+        /// <param name="skill"></param>
+        /// <returns>New Skill Added</returns>
+     public async Task<string> AddNewSkill(Skill skill)
         {
-            //Business logic to add skills to database
-            return null;
+            //Business Logic goes here
+            throw new NotImplementedException();
         }
-        // delete skill of full stack engineer from database
+
+        /// <summary>
+        /// call repository method to delete skill of full stack engineer from database
+        /// </summary>
+        /// <param name="skillname"></param>
+        /// <returns>delete count 1</returns>
+
         public async Task<int> DeleteSkill(string skillname)
         {
-             //Business logic to delete skill from database
-            return 0;
+            //Business Logic goes here
+            throw new NotImplementedException();
         }
-        // update skill upgarded by full stack engineer from database
-        public async Task<int> EditSkill(Skill skill)
+
+
+        /// <summary>
+        /// update skill upgarded by full stack engineer from database
+        /// </summary>
+        /// <param name="skill"></param>
+        /// <returns>edit count 1</returns>
+       public async Task<int> EditSkill(Skill skill)
         {
-            //Business logic to update skill from database
-            return 0;
+            //Business Logic goes here
+            throw new NotImplementedException();
         }
     }
 }

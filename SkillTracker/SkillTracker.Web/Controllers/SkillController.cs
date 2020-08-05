@@ -10,70 +10,114 @@ using SkillTracker.Entities;
 
 namespace SkillTracker.Web.Controllers
 {
+    //[Route("/skill")]
     public class SkillController : Controller
     {
         private readonly ISkillService _skillService;
-        public SkillController(SkillContext skillContext)
+        public SkillController(ISkillService skillService)
         {
-            _skillService = new SkillService(skillContext);
-        }
-        // Save new skill upgarded by full stack engineer
-        public IActionResult AllSkills()
-        {
-            //Business logic to call method of Skill service entity
-            return View();
-        }
-        // Save new skill upgarded by full stack engineer
-        public IActionResult NewSkill()
-        {
-            //Business logic to call method of Skill service entity
-            return View();
+            _skillService = skillService;
         }
 
-        // Save new skill upgarded by full stack engineer
+
+        /// <summary>
+        /// Show all skills present in db
+        /// </summary>
+        /// <returns></returns>
+          
+        
+        public async Task<IActionResult> AllSkills()
+        {
+            //business logic goes here
+            throw new NotImplementedException();
+        }
+
+
+        /// <summary>
+        /// return view to enter details of skill
+        /// </summary>
+        /// <returns></returns>
+
+       
+        public IActionResult NewSkill()
+        {
+            //business logic goes here
+            throw new NotImplementedException();
+        }
+
+
+        /// <summary>
+        /// Post new skill details and save it
+        /// </summary>
+        /// <param name="skill"></param>
+        /// <returns></returns>
+
+       
         [HttpPost]
         public async Task< IActionResult> NewSkill(Skill skill)
         {
-            //Business logic to call method of Skill service entity
-            return View();
+            //business logic goes here
+            throw new NotImplementedException();
         }
 
-        // update skill upgarded by full stack engineer
+        /// <summary>
+        /// Show view to enter details of skill
+        /// </summary>
+        /// <returns></returns>
+        
         [HttpGet]
-        [Route("/skill/update")]
+       
         public IActionResult ReviseSkill()
         {
-            //Business logic to call method of Skill service entity
-            return View();
+            //business logic goes here
+            throw new NotImplementedException();
         }
 
-        // update skill upgarded by full stack engineer
+        /// <summary>
+        /// update skill upgarded by full stack engineer
+        /// </summary>
+        /// <param name="skill"></param>
+        /// <returns></returns>
+        
         [HttpPost]
-        [Route("/skill/update")]
-        public async Task<IActionResult> ReviseSkill(Skill skill)
+       public async Task<IActionResult> ReviseSkill(Skill skilldetails)
         {
-            //Business logic to call method of Skill service entity
-            return View();
+            //business logic goes here
+            throw new NotImplementedException();
         }
 
-        // delete skill of full stack engineer
+
+        /// <summary>
+        /// Show view to input name od skill to be deleted
+        /// </summary>
+        /// <returns></returns>
+     
         [HttpGet]
-        [Route("/skill/delete")]
+       
         public IActionResult DestroySkill()
         {
-            //Business logic to call method of Skill service entity
-            return View();
+            //business logic goes here
+            throw new NotImplementedException();
         }
 
-        // delete skill of full stack engineer
+
+        /// <summary>
+        /// delete skill of full stack engineer
+        /// </summary>
+        /// <param name="skillname"></param>
+        /// <returns></returns>
+        
         [HttpPost]
-        [Route("/skill/delete")]
+    
         public async Task<IActionResult> DestroySkill(String skillname)
         {
-            //Business logic to call method of Skill service entity
-            return View();
+            //business logic goes here
+            throw new NotImplementedException();
         }
 
-        
+        public IActionResult Error()
+        {
+            return View();
+        }
     }
 }

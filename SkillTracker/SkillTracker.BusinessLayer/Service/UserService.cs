@@ -6,41 +6,118 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using SkillTracker.BusinessLayer.Service.Repository;
 
 namespace SkillTracker.BusinessLayer.Service
 {
-    
+
     public class UserService : IUserService
     {
-        private IUserConnection _userConnection;
+        /// <summary>
+        /// userrepository type of reference
+        /// </summary>
+        private readonly IUserRepository _userRepository;
 
-        public UserService(UserContext userContext)
+        /// <summary>
+        /// Inject UserRepository object
+        /// </summary>
+        /// <param name="skillRepository"></param>
+        public UserService(IUserRepository userRepository)
         {
-            _userConnection = new UserConnection(userContext);
+            _userRepository = userRepository;
         }
-        //Save new user into database
+
+        /// <summary>
+        /// call repository method to create new user 
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns>New User Registered</returns>
         public async Task<string> CreateNewUser(User user)
         {
-            //Business logic to add new user into database
-            return null;
-        }
-        public async Task<string> ValidateUserFirstName(User user)
-        {
-            //Business logic to validate user name already exist into database before creating new user
-            return null;
-        }
-        //delete user details from database
-        public async Task<int> RemoveUser(string firstname, string lastname)
-        {
-            //Business logic to delete  user from database
-            return 0;
+            //Business Logic goes here
+            throw new NotImplementedException();
         }
 
-        //update user details into database
+        /// <summary>
+        /// call repository method to retrieve all users
+        /// </summary>
+        /// <returns>list of users</returns>
+        public async Task<IEnumerable<User>> GetAllUsers()
+        {
+            //Business Logic goes here
+            throw new NotImplementedException();
+        }
+
+
+        /// <summary>
+        /// call repository method to delete user from db
+        /// </summary>
+        /// <param name="firstname"></param>
+        /// <param name="lastname"></param>
+        /// <returns>delete count</returns>
+        public async Task<int> RemoveUser(string firstname, string lastname)
+        {
+            //Business Logic goes here
+            throw new NotImplementedException();
+        }
+
+
+        /// <summary>
+        /// call repository method to search user by email id into db
+        /// </summary>
+        /// <param name="Email"></param>
+        /// <returns>User details</returns>
+        public async Task<User> SearchUserByEmail(string Email)
+        {
+            //Business Logic goes here
+            throw new NotImplementedException();
+        }
+
+
+        /// <summary>
+        /// call repository method to search user by firstname into db
+        /// </summary>
+        /// <param name="firstname"></param>
+        /// <returns>User details</returns>
+        public async Task<User> SearchUserByFirstName(string firstname)
+        {
+            //Business Logic goes here
+            throw new NotImplementedException();
+        }
+
+
+        /// <summary>
+        /// call repository method filtered by mobile number into db
+        /// </summary>
+        /// <param name="mobilenumber"></param>
+        /// <returns>User details</returns>
+        public async Task<User> SearchUserByMobile(long mobilenumber)
+        {
+            //Business Logic goes here
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// call repository method to search user by it's skill range
+        /// </summary>
+        /// <param name="startvalue"></param>
+        /// <returns>User details</returns>
+        public async Task<User> SearchUserBySkillRange(int startvalue,int endvalue)
+        {
+            //Business Logic goes here
+            throw new NotImplementedException();
+        }
+
+
+        /// <summary>
+        /// call repository method to update user 
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns>update count 1</returns>
         public async Task<int> UpdateUser(User user)
         {
-            //Business logic to update  user from database
-            return 0;
+            //Business Logic goes here
+            throw new NotImplementedException();
         }
     }
 }
