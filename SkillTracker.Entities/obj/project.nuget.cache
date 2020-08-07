@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "A4TYAxYAyMunQy05BvmYgLcfhqdWU020oJAF0ByrYmYQ+c7gU/XOxhbwYtDtb1L8tJZWPuEOFTzDrDlVIR7yrA==",
+  "success": true,
+  "projectFilePath": "F:\\f\\varsha_Kone\\IIHT\\CaseStudy\\Revised\\Junior FSE PA\\CodeTemplate\\Repository\\SkillTracker_JFSEPA_TemplateRepository\\SkillTracker.Entities\\SkillTracker.Entities.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Shri\\.nuget\\packages\\microsoft.netcore.app\\2.2.0\\microsoft.netcore.app.2.2.0.nupkg.sha512",
+    "C:\\Users\\Shri\\.nuget\\packages\\microsoft.netcore.dotnetapphost\\2.2.0\\microsoft.netcore.dotnetapphost.2.2.0.nupkg.sha512",
+    "C:\\Users\\Shri\\.nuget\\packages\\microsoft.netcore.dotnethostpolicy\\2.2.0\\microsoft.netcore.dotnethostpolicy.2.2.0.nupkg.sha512",
+    "C:\\Users\\Shri\\.nuget\\packages\\microsoft.netcore.dotnethostresolver\\2.2.0\\microsoft.netcore.dotnethostresolver.2.2.0.nupkg.sha512",
+    "C:\\Users\\Shri\\.nuget\\packages\\microsoft.netcore.platforms\\2.2.0\\microsoft.netcore.platforms.2.2.0.nupkg.sha512",
+    "C:\\Users\\Shri\\.nuget\\packages\\microsoft.netcore.targets\\2.0.0\\microsoft.netcore.targets.2.0.0.nupkg.sha512",
+    "C:\\Users\\Shri\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
